@@ -156,7 +156,7 @@ def main():
     print("Saving results Leiden CPM 0.001...")
     save_cluster_sizes_to_csv(cluster_sizes_2, f"{label}_Leiden_CPM_001.csv")
     print("Saving results Leiden Modularity...")
-    save_cluster_sizes_to_csv(cluster_sizes_3, f"{label}_Leiden_CPM_modularity.csv")
+    save_cluster_sizes_to_csv(cluster_sizes_3, f"{label}_Leiden_modularity.csv")
 
 if __name__ == '__main__':
     main()

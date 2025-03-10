@@ -55,14 +55,12 @@ def singleton_vs_non_singleton(data, singleton_analysis):
 
     singleton_analysis['singleton node count'].append(str(singleton_node_count))
     singleton_analysis['non-singleton node count'].append(str(non_singleton_node_count))
-    singleton_analysis['total node count'].append(str(total_node_count))
-    singleton_analysis['node coverage (%)'].append(f'{singleton_node_count / total_node_count * 100:.4f}')
+    singleton_analysis['total cluster count'].append(str(total_cluster_count))
+    singleton_analysis['node coverage (%)'].append(non_singleton_node_count / total_node_count * 100)
     singleton_analysis['singleton cluster count'].append(str(singleton_cluster_count))
     singleton_analysis['non-singleton cluster count'].append(str(non_singleton_cluster_count))
-    singleton_analysis['percent singleton cluster (%)'].append(
-        f'{singleton_cluster_count / total_cluster_count * 100:.4f}')
-    singleton_analysis['percent non-singleton cluster (%)'].append(
-        f'{non_singleton_cluster_count / total_cluster_count * 100:.4f}')
+    singleton_analysis['percent singleton cluster (%)'].append(singleton_cluster_count / total_cluster_count * 100)
+    singleton_analysis['percent non-singleton cluster (%)'].append(non_singleton_cluster_count / total_cluster_count * 100)
 
     return singleton_analysis
 
@@ -94,7 +92,7 @@ def main():
 
         "singleton node count": [],
         "non-singleton node count": [],
-        "total node count": [],
+        "total cluster count": [],
         "node coverage (%)": [],
         "singleton cluster count": [],
         "non-singleton cluster count": [],
